@@ -1,24 +1,26 @@
 public class Laptops {
-    private String Brand;
-    private String Color;
-    private String Side;
-    private int Ram;
-    private int Hdd;
+    String laptopModel;
+    int ram;
+    int hdd;
+    String color;
+    int price;
 
-    // Конструктор
-    public Laptops(String brand, String color, String side, int ram, int hdd) {
-        Brand = brand;
-        Color = color;
-        Side = side;
-        Ram = ram;
-        Hdd = hdd;
+    public Laptops(String laptopModel, int ram, int hdd,  String color, int price) {
+        this.laptopModel = laptopModel;
+        this.ram = ram;
+        this.hdd = hdd;
+        this.price = price;
+        this.color = color;
     }
-
-    // Переопределение метода
 
     @Override
     public String toString() {
-        return Brand + "Бренд " + Color + "Цвет " + Side + "Страна "
-                + Ram + "Оперативная память " + Hdd + "Жесткий диск ";
+        return "Модель ноутбука='" + laptopModel + '\'' +
+                ", ОЗУ=" + ram +
+                ", HDD=" + hdd +
+                ", Цвет='" + color + '\'' +
+                ", Цена=" + price;
     }
+
+
 }
